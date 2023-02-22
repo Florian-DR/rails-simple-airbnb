@@ -1,0 +1,12 @@
+<h1 class="text-center">See all our flats</h1>
+
+<ul>
+  <% @flats.each do |flat| %>
+    <div>
+      <p><%= link_to flat.address, flat_path(flat) %></p>
+      <p><%= flat.description%></p>
+      <p><%= flat.price_per_night %></p>
+      <p><%= flat.number_of_guests%></p>
+    </div>
+  <% end %>
+</ul>
